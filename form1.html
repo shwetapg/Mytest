@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="form1.css">
+ </head>
+<body style="border-style:double;width:75%;">
+  <form name="myform" method="post" action="#" onsubmit="return (validateemail() || allLetter(document.myform.fname) || allnumeric(document.myform.telno));">  
+
+    <script src="form1.js"></script>
+    <script src="checkfloat.js"></script>    
+
+    <h1 style="text-align: center;"><u>Student Form</u></h1>
+    <div class="hd">Personal Details</div><br><br>
+    <div class="contents"><label><b>First Name</b><span style="color:red;">*</span><b>:</b>&nbsp;&nbsp;<input type="text" id="fname" 
+      name="fname" placeholder="Your name.." required></label><br><br>
+      <label><b>Last Name :</b>&nbsp;&nbsp;<input type="text" id="lname" name="lname" placeholder="Your last name.."></label><br><br>
+      <label><b>Gender :</b>&nbsp;&nbsp;<br>
+      <input type="radio" name="gender" id="rd1" value="" checked> Male
+      <input type="radio" name="gender" id="rd2" value=""> Female
+      <input type="radio" name="gender" id="rd3" value=""> Other<br><br>
+
+      <label><b>DOB :</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" name="bday" placeholder="dd/mm/yyyy"></label><br><br>
+      <label><b>E-mail<span style="color:red;">*</span> :</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="E-mail" name="email" id="email" required></label><br><br>
+      <label><b>phone num :</b>&nbsp;<input type="tel" id="telno" name="telno" placeholder="123-4567-8901"></label><br><br>
+      <label><b>Address :</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea style="background-color:lightblue" rows="5" cols="50"></textarea></textarea></label><br><br>
+    </div>
+    <div class="hd1">Education Details</div><br><br>
+    <div class="contents1"><label><b>School Name :</b>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="slname" name="slanme"></label>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <label><b>10<sup>th</sup> Percentage<span style="color:red;">*</span> :</b>&nbsp;&nbsp;&nbsp;<input type="text" id="mark" name="mark" required></label><br><br>
+      <label><b>College Name :</b>&nbsp;&nbsp;&nbsp;<input type="text" id="clname" name="clanme"></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <label><b>Percentage<span style="color:red;">*</span> :</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="mark1" name="mark1" required></label><br><br>
+      <input type="radio" name="college" value="PUC" checked><b>PUC</b>
+      <input type="radio" name="college" value="Diploma"><b>Diploma</b><br><br>
+      <label><b>Select degree :</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="degree"></label>
+        <option value="BA">BA</option>
+        <option value="BE/B.TECH">BE/B.TECH</option>
+        <option value="BCA">BCA</option>
+        <option value="BBA">BBA</option>
+        <option value="BCOM">BCOM</option>
+        </select><br><br>
+
+        <label><b>College Name :</b>&nbsp;&nbsp;&nbsp;<input type="text" id="dclg" name="dclg"></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label><b>Percentage<span style="color:red;">*</span> :</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="mark2" name="mark2" required></label><br><br>
+        </label>
+    </div>
+    <div class="ss">  
+      <input type="button" value="Save" onclick="WriteCookie();">
+      <input type="submit" value="submit" onclick="return allfloat(document.myform.mark);">
+      <input type="reset">
+    </div>
+</form>
+</body>
+</html>
