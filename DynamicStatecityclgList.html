@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+    <script src="CollegeListdd.js"></script>
+</head>
+<body>
+  <div>
+    <select onchange="print_city('cities',this.selectedIndex);" name="state" id="state"></select>
+    <script type="text/javascript" language="javascript">print_state("state");</script>
+  </div>
+  <div>
+    <select onchange="print_clgs('clgs',this.selectedIndex);" name="cities" id="cities"></select>
+    <script type="text/javascript" language="javascript">print_city("cities");</script>
+  </div>
+  <div>
+    <select name="clgs" id="clgs"></select>
+    <script type="text/javascript" language="javascript">print_clgs("clgs");</script>
+  </div>
+</body>
+</html>
